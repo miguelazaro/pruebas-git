@@ -1,0 +1,7 @@
+# Ignora la carpeta de dependencias
+node_modules/
+
+# Otros comunes que puedes ignorar
+.env
+.DS_Store
+*.log
