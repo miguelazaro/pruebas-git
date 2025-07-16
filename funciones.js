@@ -8,8 +8,6 @@
     //     return numero %2 === 1;
     // }
 
-
-    
     //Función coregida
     function esPar(numero) {
     return numero % 2 === 0; 
