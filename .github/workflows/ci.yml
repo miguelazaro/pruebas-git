@@ -1,21 +1,28 @@
-name: Node.js CI
+name: Pruebas Automáticas
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Clonar código
+        uses: actions/checkout@v3
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - name: Usar Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '18'
 
-      - name: Run tests manually
-        run: node test/test.js
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas con Jest
+        run: npm test
