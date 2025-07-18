@@ -1,22 +1,39 @@
 const { suma, esPar, dividir, obtenerIniciales, formatearFecha } = require('./funciones');
 
-test('Suma de 2 + 3 es 5', () => {
-  expect(suma(2, 3)).toBe(5);
-});
+describe('Pruebas de las funciones', () => {
+    
+    test('suma: Devuelve la suma de dos números', () => {
+        expect(suma(2, 3)).toBe(5);
+        expect(suma(-2, 2)).toBe(0);
+        expect(suma(102, 62)).toBe(164);
+    });
 
-test('Número 4 es par', () => {
-  expect(esPar(4)).toBe(true);
-});
+    test('esPar: Devuelve true si el número es par y false si es impar', () => {
+        expect(esPar(2)).toBe(true); 
+        expect(esPar(18)).toBe(true); 
+        expect(esPar(49)).toBe(false); 
+    });
 
-test('Dividir 6 entre 2 es 3', () => {
-  expect(dividir(6, 2)).toBe(3);
-});
+    test('dividir: Devuelve "Error" si el divisor es 0', () => {
+        expect(dividir(10, 0)).toBe("Error");
+        expect(dividir(1000, 0)).toBe("Error");
+    });
 
-test('Obtener iniciales de "Juan Pérez"', () => {
-  expect(obtenerIniciales("Juan Pérez")).toEqual("JP");
+    test('dividir: Devuelve el resultado de la división', () => {
+        expect(dividir(10, 2)).toBe(5);
+        expect(dividir(9, 3)).toBe(3);
+    });
 
-});
+    test('obtenerIniciales: Devuelve las iniciales del nombre completo', () => {
+        expect(obtenerIniciales("Miguel Lazaro")).toBe('YV');
+        expect(obtenerIniciales("Jesus Gonzales")).toBe('MH');
+        expect(obtenerIniciales("Ana")).toBe('A');
+    });
 
-test('Formatear fecha "2024-07-18"', () => {
-  expect(formatearFecha("2024-07-18")).toBe("18/07/2024");
+    test('formatearFecha: Devuelve la fecha en formato DD/MM/YYYY', () => {
+        expect(formatearFecha("2020-02-18")).toBe('18/02/2020');
+        expect(formatearFecha("01-01-2022")).toBe('01/01/2022');
+        expect(formatearFecha("2025-01-04")).toBe('04/01/2025');
+    });
+
 });
