@@ -1,10 +1,23 @@
 {
-  "dependencies": {
-    "jest": "^29.7.0"
-  },
-  
   "scripts": {
     "test": "jest"
+  },
+  "name": "githubaction-maldj",
+  "version": "1.0.0",
+  "main": "funciones.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelazaro/pruebas-git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelazaro/pruebas-git/issues"
+  },
+  "homepage": "https://github.com/miguelazaro/pruebas-git#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.0.4"
   }
-
 }
