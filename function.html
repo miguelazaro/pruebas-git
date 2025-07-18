@@ -3,17 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
+    <title>Test Example</title>
   </head>
   <body>
-    <h1 id="header"></h1>
+    <h1 id="header">Test</h1>
+
     <script>
-      function test (desc, fn){
-        try{
+      function test(desc, fn) {
+        try {
           fn();
-          console.log("" + desc)
+          console.log("✅ " + desc);
+        } catch (e) {
+          console.error("❌ " + desc);
+          console.error(e);
         }
       }
+
+      // Ejemplo de uso
+      test("Suma correcta", () => {
+        if (1 + 1 !== 2) throw new Error("Error en la suma");
+      });
+
+      test("Error intencional", () => {
+        throw new Error("Este test falla");
+      });
     </script>
   </body>
 </html>

@@ -18,7 +18,6 @@
     }
 
     function formatearFecha(fechaStr){
-        //Se espera un formato 'YYYY-MM-DD'
         const partes = fechaStr.split("-");
         return `${partes[2]}/${partes[1]}/${partes[0]}`;
     }

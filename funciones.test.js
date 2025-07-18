@@ -1,4 +1,4 @@
-const { suma, esPar, dividir, obtenerIniciales, formatearFecha } = require('./funciones'); // Asegúrate de que la ruta sea correcta
+const { suma, esPar, dividir, obtenerIniciales, formatearFecha } = require('./funciones');
 
 describe('Pruebas de las funciones', () => {
     
@@ -25,8 +25,8 @@ describe('Pruebas de las funciones', () => {
     });
 
     test('obtenerIniciales: Devuelve las iniciales del nombre completo', () => {
-        expect(obtenerIniciales("Yessenia Vazquez")).toBe('YV');
-        expect(obtenerIniciales("Mariana Herrera")).toBe('MH');
+        expect(obtenerIniciales("Miguel Lazaro")).toBe('YV');
+        expect(obtenerIniciales("Jesus Gonzales")).toBe('MH');
         expect(obtenerIniciales("Ana")).toBe('A');
     });
 
